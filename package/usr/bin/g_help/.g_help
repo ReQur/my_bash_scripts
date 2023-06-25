@@ -1,0 +1,25 @@
+help:
+COMMANDS:
+usage g <command> <args>
+	pull					regular git pull but sends
+						passphrase automaticly
+
+	push <destination branch>               pushes local branch to origin"
+                                          	HEAD:refs/for/<destination branch>"
+ 	
+	get-commit <commit ref> [branch name]   pull branch from <commit ref>"
+                                          	to local branch [branch name]"
+                 	                        updates branch if it exists"
+                        	                creates if does not"
+                                	        if [branch name] does not provided"
+                                        	it updates current branch
+	
+	pass-phrase				open dialog to export passphrase
+						to yours ssh privete key
+
+OPTIONS:
+usage g <command> [options] <args>
+	--pass-phrase
+	usage g <command> --pass-phrase <args>	open dialog to export passphrase
+                                                to yours ssh privete key
+
