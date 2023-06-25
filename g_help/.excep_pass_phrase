@@ -1,0 +1,9 @@
+#!/usr/bin/expect -f
+set timeout -1
+set _scr [lindex $argv 0]
+set phrase [lindex $argv 1]
+set arg_1 [lindex $argv 2]
+set arg_2 [lindex $argv 3]
+spawn $_scr $arg_1 $arg_2
+expect "Enter passphrase for key '/home/qazar/.ssh/imclp': " {send -- "$phrase\r"}
+interact

@@ -1,0 +1,1 @@
+git fetch origin $1 && git checkout -B $2 FETCH_HEAD
